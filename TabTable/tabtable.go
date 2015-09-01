@@ -11,19 +11,19 @@ func main() {
 }
 
 func ui_main() {
+	//main window
 	w := qt5.NewWidget()
 	defer w.Close()
 	w.SetGeometryv(10, 10, 500, 500)
 
 	button2 := qt5.NewButtonWithText("Добавить вкладку")
 	button2.SetSizePolicyHV(0, 0)
-	var sz qt5.Size
-	sz.Height = 300
-	sz.Width = 300
-
+	//create verical layout
 	vbox := qt5.NewVBoxLayout()
+
 	vbox.AddWidget(button2)
 
+	//create table
 	table := qt5.NewTableWidget()
 	table.SetRowCount(10)
 	table.SetColumnCount(10)
